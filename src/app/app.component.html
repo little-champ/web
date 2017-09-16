@@ -1,0 +1,16 @@
+<md-toolbar class="toolbar" color="primary">
+  <button md-button class="menu-button" (click)="sidenav.toggle()"><md-icon>menu</md-icon></button>
+  <span>Little Champ</span>
+</md-toolbar>
+
+<md-sidenav-container class = "container">
+
+  <md-sidenav #sidenav class="sidenav" [mode]="sideNavMode">
+    Jolly good!
+  </md-sidenav>
+
+  <section class="content">
+    <h1>Page Title</h1>
+  </section>
+
+</md-sidenav-container>
