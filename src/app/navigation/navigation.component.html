@@ -1,0 +1,12 @@
+<mat-expansion-panel *ngFor="let item of items">
+  <mat-expansion-panel-header class="header">
+    <mat-panel-title>
+      {{item.title}}
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <ul class="nav-list">
+    <li class="nav-item" *ngFor="let child of item.children">
+      <a class="nav-link" [ngClass]="{'selected': child.selected}" href="#">{{child.title}}</a>
+    </li>
+  </ul>
+</mat-expansion-panel>

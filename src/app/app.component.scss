@@ -1,42 +1,42 @@
-@import "../_variables";
-.container {
-    height: auto!important;
-    margin: 0;
-    max-width: 100%;    
-    min-height: 100%;
-    transform: none;
-    -webkit-transform: none;
-}
-.content {
-    padding: 80px 3rem 1rem;
-}
-.menu-button {
+@import '../theme';
+
+$background: map-get($theme, background);
+
+mat-sidenav-container {
     height: 100%;
-    padding: 0;
-}
-.sidenav {
-    background-color: #fafafa;
-    bottom: 0;
-    box-shadow: 6px 0 6px rgba(0,0,0,.1);
-    height: calc(100vh - 64px);
-    left: 0;
-    min-width: 260px;
-    padding: 0;
-    position: fixed;
-    top: 64px;
-}
-.toolbar {
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
-    left: 0;
-    padding: 0 16px 0 0;
-    position: fixed;
-    right: 0;    
-    top: 0;
-    z-index: 10;
-}
-@media ($mat-small) {
-    .mat-sidenav {
-        top: 56px;
-        height: calc(100vh - 56px);
+    
+    mat-sidenav {
+        background-color: mat-color($background, dialog);
+        bottom: 0;
+        box-shadow: 5px 0 5px invert(mat-color($background, card, 0.25));
+        left: 0;
+        min-width: 260px;
+        padding: 0;
+        position: fixed;
+        top: 64px;
+        @media ($mat-small) {
+            top: 56px;
+        }
     }
-  }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: calc(100% - 64px);
+        margin: 64px 0 0;
+        position: relative;
+        @media ($mat-small) {
+            height: calc(100% - 56px);
+            margin: 56px 0 0;
+        }
+    
+        .content {
+            display: flex;
+            flex: 1 0 auto;
+        }
+    
+        .footer {
+            flex: 0 0 auto;
+        }
+    }
+}

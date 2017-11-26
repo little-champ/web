@@ -1,0 +1,30 @@
+@import '../../theme';
+
+.header {
+    max-height: 48px;
+}
+
+::ng-deep .mat-expansion-panel-body {
+    margin: 0 !important;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: mat-color(map-get($theme, foreground), text);
+    display: block;
+    padding: 10px 24px;
+    &:hover {
+        background-color: mat-color($primary, lighter);
+    }
+    &.selected {
+        color: mat-color($primary, darker-contrast);
+        background-color: mat-color($primary, darker);
+    }
+}
+

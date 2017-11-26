@@ -1,0 +1,37 @@
+@import '../../styles';
+
+.container {
+    flex: 0 0 auto;
+    background-color: mat-color($primary);
+    margin: 0;
+    display: flex;
+    @media ($mat-small) {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+}
+
+.section-left {
+    justify-content: flex-start;
+    flex: 1 1 auto;
+}
+
+.section-right {
+    justify-content: flex-end;
+    flex: 1 1 auto;
+    display: flex;
+    @media ($mat-small) {
+        flex-direction: column;
+    }
+}
+
+.item {
+    color: mat-color($primary, default-contrast);
+    padding: 10px;
+    a {
+        color: currentColor;
+    }
+    @media ($mat-small) {
+        padding: 10px 0 5px;
+    }
+}

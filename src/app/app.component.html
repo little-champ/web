@@ -1,16 +1,20 @@
-<md-toolbar class="toolbar" color="primary">
-  <button md-button class="menu-button" (click)="sidenav.toggle()"><md-icon>menu</md-icon></button>
-  <span>Little Champ</span>
-</md-toolbar>
+<lc-header (menuClick)="sidenav.toggle()"></lc-header>
+<mat-sidenav-container>
 
-<md-sidenav-container class = "container">
+  <mat-sidenav #sidenav class="sidenav" [mode]="sideNavMode" [opened]="true">
+    <lc-navigation></lc-navigation>
+  </mat-sidenav>
 
-  <md-sidenav #sidenav class="sidenav" [mode]="sideNavMode">
-    Jolly good!
-  </md-sidenav>
+  <div class="container">
 
-  <section class="content">
-    <h1>Page Title</h1>
-  </section>
+    <section class="content">
+      <lc-home style="flex: 1 1 auto;"></lc-home>
+    </section>
 
-</md-sidenav-container>
+    <section class="footer">
+      <lc-footer></lc-footer>
+    </section>
+
+  </div>
+
+</mat-sidenav-container>

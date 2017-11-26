@@ -7,10 +7,11 @@ import * as AppConstants from './app.constants';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  sideNavMode = AppConstants.SideNavMode.side;
-
   @HostListener('window:resize', ['$event.target.innerWidth'])
+  sideNavMode = AppConstants.SideNavMode.side.toString();
+  constructor() {
+  }
   onResize(width) {
-    this.sideNavMode = width > AppConstants.mobileDeviceWidth ? AppConstants.SideNavMode.side : AppConstants.SideNavMode.over;
+    this.sideNavMode = width > AppConstants.mobileDeviceWidth ? AppConstants.SideNavMode.side.toString() : AppConstants.SideNavMode.over.toString();
   }
 }

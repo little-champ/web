@@ -1,0 +1,8 @@
+@import '../../theme';
+
+.container {
+    background-color: mat-color($primary, lighter);
+    flex: 1 1 auto;
+    padding: 3rem 0;
+    text-align: center;
+}
