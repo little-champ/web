@@ -1,15 +1,19 @@
 @import '../../theme';
 
-$background: map-get($theme, background);
-
 .menu-button {
     height: 100%;
+}
+
+.title {
+    @media ($mat-small) {
+        display: none;
+    }
 }
 
 mat-toolbar {
     z-index: 2;
     position: fixed;
-    box-shadow: 0 5px 5px invert(mat-color($background, card, 0.25));
+    box-shadow: 0 2px 2px $shadow-color;
     padding: 0;
     a {
         text-decoration: none;

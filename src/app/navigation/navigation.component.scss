@@ -4,8 +4,14 @@
     max-height: 48px;
 }
 
+//TODO: Find alternative for ::ng-deep
 ::ng-deep .mat-expansion-panel-body {
     margin: 0 !important;
+}
+
+//TODO: Find alternative for ::ng-deep
+::ng-deep .mat-expansion-panel {
+    background-color: $background-color;
 }
 
 .nav-list {
@@ -17,6 +23,7 @@
 .nav-link {
     text-decoration: none;
     color: mat-color(map-get($theme, foreground), text);
+    background-color: $background-color;
     display: block;
     padding: 10px 24px;
     &:hover {
@@ -24,7 +31,7 @@
     }
     &.selected {
         color: mat-color($primary, darker-contrast);
-        background-color: mat-color($primary, darker);
+        background-color: mat-color($accent);
     }
 }
 
